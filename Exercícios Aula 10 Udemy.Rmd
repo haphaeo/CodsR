@@ -1,0 +1,53 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+*Run* = *Ctrl+Shift+Enter*. 
+New run chunk = *Ctrl+Alt+I*.
+New text chunk
+
+Exercício 1 - Crie duas variáveis Ana e Paulo e atribua a elas valores de suas idades, sendo respectivamente 8 e 12 anos. As variáveis devem ser do tipo inteiro. Imprima no console "A menina é mais velha" ou "O menino é mais velho" como resultado de um teste lógico.
+```{r}
+#Exercício 1
+maisVelho <- function(Pessoa1, Pessoa2) {
+  if (is.numeric(Pessoa1)&is.numeric(Pessoa2)) { 
+      if (Pessoa1 > Pessoa2) {
+        cat("A pessoa 2 é mais velha que a pessoa 2", "\n")
+      } else if (Pessoa1 < Pessoa2) {
+        cat("A pessoa 1 é mais nova que a pessoa 2", "\n")
+      } else {
+        cat("As idades das pessoas são iguais","\n")
+      }
+  } else {
+      print ("Algum dos valores não é numero, tente de novo")
+  }
+} 
+maisVelho(1.5,"A")
+
+```
+Exercício 2 BOD é um objeto existente no R. Verifique qual a classe deste objeto.
+```{r}
+typeof(BOD)
+```
+Exercício 3. Crie um vetor que armazene números de 1 a 10 e posteriormente imprima os valores pares.
+```{r}
+x = seq(1,10,1)
+x=list(x)
+x
+
+```
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+Sandbox:
+Testa se é inteiro:
+if ((Pessoa1 %% 1 != 0)|(Pessoa2 %% 1 != 0)) 
+x=is.integer(Pessoa1)
+
+
+
+4. women é um dataframe existente no R. Imprima as 10 últimas linhas
+5. Use a função plot do R para produzir um gráfico do atributos Sepal.Width e Petal.Length do conjunto de dados Iris. O gráfico deve imprimir apenas das linhas 50 até 100.
+6. Crie dois vetores de tamanhos iguais, some as posições equivalentes dos vetores e imprima o resultado.
+7. Imprima o número de linhas, de colunas, nomes das linhas e nome das colunas do conjunto de dados CO2.
